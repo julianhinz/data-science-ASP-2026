@@ -3,9 +3,13 @@
 ###
 # 00 - Download the data for firm-level analysis
 # 260303
-# - downloads data fro CDN
+# - downloads data from CDN
 # - unzips the data
 ###
+
+# create input and temp folders if they don't exist
+mkdir -p input
+mkdir -p temp
 
 # download the data
 echo "Downloading data from CDN..."
