@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 ###
 # 01 - Load and Explore Firm-Level Trade Data
 # 260226
@@ -16,8 +18,8 @@ dir.create("output/figures", showWarnings = FALSE, recursive = TRUE)
 
 # 1 - load data (chunk and pull) ----
 
-# list all csv files in the imports_usa folder
-files = list.files("temp/imports_usa", pattern = "\\.csv$", full.names = TRUE)
+# list all csv files in the Impo_2018 folder
+files = list.files("temp/Impo_2018", pattern = "\\.csv$", full.names = TRUE)
 
 # read and bind all chunks
 data = rbindlist(lapply(files, function(f) {

@@ -6,8 +6,8 @@
 
 all: output/figures/size_distribution.png output/figures/imports_over_time.png
 
-temp/Impo_2018/Diciembre.csv: code/00-download_data.sh
-	./code/00-download_data.sh
+temp/Impo_2018: code/00-download.sh
+	./code/00-download.sh
 
-output/figures/size_distribution.png output/figures/imports_over_time.png: code/01-load_and_explore.R temp/Impo_2018/Diciembre.csv
+output/figures/size_distribution.png output/figures/imports_over_time.png: code/01-load_and_explore.R temp/Impo_2018
 	./code/01-load_and_explore.R
